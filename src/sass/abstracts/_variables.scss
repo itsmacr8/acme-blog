@@ -1,0 +1,35 @@
+// 400 is the base color. After that it depends on the lightness of hsl.
+:root {
+    --ff-sans: "IBM Plex Sans", sans-serif;
+    --ff-serif: "IBM Plex Serif", serif;
+
+    --fs-200: 0.75rem;
+    --fs-300: 1rem;
+    --fs-400: 1.25rem;
+    --fs-500: 1.375rem;
+    --fs-600: 1.75rem;
+    --fs-900: 2.125rem;
+
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --white: hsl(0, 0%, 100%);
+    --gray-200: hsl(218, 31%, 95%);
+    --gray-300: hsl(221, 12%, 70%);
+    --gray-400: hsl(221, 10%, 50%);
+    --gray-500: hsl(221, 12%, 30%);
+    --black: hsl(240, 20%, 1%);
+
+    --primary-300: hsl(220, 100%, 98%);
+    --primary-400: hsl(219, 51%, 71%);
+
+    --br: 1rem;
+
+    @include respond(tab-port) {
+        --fs-500: 1.75rem;
+        --fs-600: 2.125rem;
+        --fs-900: 4.25rem;
+    }
+}

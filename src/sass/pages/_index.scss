@@ -1,0 +1,21 @@
+.primary-header {
+    border-radius: var(--br);
+    background-color: var(--primary-400);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    min-height: 50vh;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.page-home {
+    .primary-header {
+        background-image: url('../../../assets/hero.jpg');
+        background-position: center center;
+    }
+}

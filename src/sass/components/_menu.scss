@@ -1,0 +1,26 @@
+.primary-nav {
+    border-radius: var(--br);
+    font-family: var(--ff-serif);
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    &__item {
+        line-height: 0;
+        @include respond(tab-port) {
+            margin-left: 2em;
+        }
+    }
+
+    &__link {
+        color: var(--gray-200);
+        text-decoration: none;
+        @include respond(tab-port) {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
