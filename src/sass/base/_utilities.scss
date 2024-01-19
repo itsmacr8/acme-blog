@@ -1,0 +1,20 @@
+section {
+    padding-block: 2.5rem;
+    @include respond(tab-port) {
+        padding-block: 3.5rem;
+    }
+}
+
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.flow-content > * + * {
+    /* Uses em so that space can be as big as the font size. */
+    margin-top: var(--flow-spacer, 1em);
+}
+
+.page-title {
+    font-size: var(--fs-900);
+}

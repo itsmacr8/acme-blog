@@ -19,3 +19,11 @@
         background-position: center center;
     }
 }
+
+.intro {
+    --flow-spacer: 2em;
+}
+
+.page-intro {
+    font-size: var(--fs-600);
+}

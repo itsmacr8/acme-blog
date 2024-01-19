@@ -1,0 +1,24 @@
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    background: none;
+    font-weight: var(--fw-700);
+    font-size: var(--fs-300);
+    font-family: var(--ff-sans);
+    text-decoration: none;
+    color: var(--black);
+
+    &:hover,
+    &:focus {
+        color: var(--primary-400);
+    }
+
+    &::after {
+        content: "\203A";
+        margin-left: 1em;
+        font-weight: var(--fw-300);
+    }
+}
+
+
