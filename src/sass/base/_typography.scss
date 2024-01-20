@@ -35,3 +35,14 @@ h3,
     font-family: var(--ff-serif);
     font-weight: var(--fw-200);
 }
+
+a {
+    font-weight: var(--fw-700);
+    font-size: var(--fs-300);
+    color: var(--black);
+}
+
+a:hover,
+a:focus {
+    color: var(--primary-400);
+}
