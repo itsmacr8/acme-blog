@@ -1,0 +1,93 @@
+.page-blog .primary-header {
+    background-image: url('../../../assets/blog.jpg');
+    background-position: left center;
+}
+
+.secondary-navigation {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    justify-content: space-between;
+}
+
+.categories {
+    display: flex;
+    gap: 1rem;
+
+    button {
+        cursor: pointer;
+        font-size: var(--fs-200);
+        text-transform: uppercase;
+        background: transparent;
+        border: 0;
+    }
+}
+
+.article-grid {
+    display: grid;
+    gap: 3em 2em;
+    grid-template-columns: repeat(6, 1fr);
+
+    /* Grid items width is 100% in the mobile devices */
+    & > * {
+        grid-column: 1 / -1;
+    }
+
+    @include respond(custom) {
+        /* Grid items divide into two column
+        except the featured article item. */
+        & > *:not(:first-child) {
+            grid-column: span 3;
+        }
+    }
+
+    /* This grid item width is 100% */
+    & > *:first-child {
+        @include respond(tab-port) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    & > .article-preview {
+        &:first-child {
+            @include respond(tab-port) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr min-content 1fr;
+                gap: 1em 2em;
+            }
+        }
+
+        &:first-child img {
+            @include respond(tab-port) {
+                grid-row: span 3;
+                height: 17.5rem;
+            }
+        }
+
+        &:first-child > h3 {
+            @include respond(tab-port) {
+                margin-top: auto;
+            }
+        }
+    }
+
+    /* This grid item width is 50%. */
+    & > *:nth-child(2),
+    & > *:nth-child(3),
+    & > *:nth-child(7),
+    & > *:nth-child(8) {
+        @include respond(tab-port) {
+            grid-column: span 3;
+        }
+    }
+
+    /* This grid item width is 33%. */
+    & > *:nth-child(4),
+    & > *:nth-child(5),
+    & > *:nth-child(6) {
+        @include respond(tab-port) {
+            grid-column: span 2;
+        }
+    }
+}
