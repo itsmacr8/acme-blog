@@ -1,0 +1,12 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    & > * {
+        flex-basis: 100%;
+    }
+    @include respond(tab-port) {
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+}
