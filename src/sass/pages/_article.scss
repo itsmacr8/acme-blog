@@ -1,0 +1,55 @@
+.page-article {
+    .primary-header {
+        background-image: url('../../../assets/article.jpg');
+        background-position: left center;
+        /* So that overlay background does not show its corner. */
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+
+        /* To place the heading text center of the header */
+        .container {
+            width: 100%;
+            margin-block: auto;
+
+            /* To set the heading text width. */
+            & > * {
+                max-width: 20ch;
+            }
+        }
+
+        /* To add an overlay behind the text and
+        on top of that background color so that
+        user can read the header text easily. */
+        &::after {
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.45),
+                rgba(255, 255, 255, 0)
+            );
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
+}
+
+.article-full {
+    --flow-spacer: 2em;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__title {
+        font-size: var(--fs-600);
+        color: var(--gray-400);
+    }
+    &__title + p {
+        font-size: var(--fs-600);
+        font-family: var(--ff-serif);
+        margin-top: 0;
+    }
+}
