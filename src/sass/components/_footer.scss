@@ -19,6 +19,9 @@
 
     &-gap {
         gap: 1rem;
+        @include respond(tab-port) {
+            align-items: center;
+        }
     }
 
     &-social {

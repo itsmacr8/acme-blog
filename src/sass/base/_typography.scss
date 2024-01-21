@@ -32,9 +32,12 @@ h2,
 h3,
 .section-subtitle,
 .text-serif {
-    font-size: var(--fs-600);
     font-family: var(--ff-serif);
     font-weight: var(--fw-200);
+}
+
+.section-subtitle {
+    font-size: var(--fs-600);
 }
 
 a {
