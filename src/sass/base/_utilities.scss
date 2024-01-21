@@ -1,3 +1,7 @@
+img {
+    border-radius: var(--br);
+}
+
 section {
     padding-block: 2.5rem;
     @include respond(tab-port) {
