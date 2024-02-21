@@ -18,9 +18,8 @@
     &__link {
         color: var(--gray-200);
         text-decoration: none;
-        @include respond(tab-port) {
+        &:hover {
             color: inherit;
-            text-decoration: none;
         }
     }
 }
